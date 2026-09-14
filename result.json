@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "state": "done",
+  "challenge": "passed",
+  "tests": [
+    {
+      "name": "test_port_scanner_invalid_hostname",
+      "status": "passed",
+      "hint": "Expected 'Error: Invalid hostname'"
+    },
+    {
+      "name": "test_port_scanner_invalid_ip_address",
+      "status": "passed",
+      "hint": "Expected 'Error: Invalid IP address'"
+    },
+    {
+      "name": "test_port_scanner_ip",
+      "status": "passed",
+      "hint": "Expected scanning ports of IP address to return [443]."
+    },
+    {
+      "name": "test_port_scanner_url",
+      "status": "passed",
+      "hint": "Expected scanning ports of URL address to return [80]."
+    },
+    {
+      "name": "test_port_scanner_url_multiple_ports",
+      "status": "passed",
+      "hint": "Expected scanning ports of URL address to return [22, 80]."
+    },
+    {
+      "name": "test_port_scanner_verbose_hostname_multiple_ports",
+      "status": "passed",
+      "hint": "Expected 'Open ports for scanme.nmap.org (45.33.32.156)\nPORT     SERVICE\n22       ssh\n80       http'"
+    },
+    {
+      "name": "test_port_scanner_verbose_ip_hostname_returned_multiple_ports",
+      "status": "passed",
+      "hint": "Expected 'Open ports for hackthissite.org (137.74.187.104)\nPORT     SERVICE\n443      https'"
+    },
+    {
+      "name": "test_port_scanner_verbose_ip_no_hostname_returned_single_port",
+      "status": "passed",
+      "hint": "Expected 'Open ports for 104.26.10.78\nPORT     SERVICE\n443      https'"
+    }
+  ],
+  "passed": [
+    "test_port_scanner_invalid_hostname",
+    "test_port_scanner_invalid_ip_address",
+    "test_port_scanner_ip",
+    "test_port_scanner_url",
+    "test_port_scanner_url_multiple_ports",
+    "test_port_scanner_verbose_hostname_multiple_ports",
+    "test_port_scanner_verbose_ip_hostname_returned_multiple_ports",
+    "test_port_scanner_verbose_ip_no_hostname_returned_single_port"
+  ],
+  "failed": [],
+  "timestamp": "2026-09-14T10:50:41.832964+00:00",
+  "stdout": "Open ports: [80] \n\nOpen ports: [8080] \n\nOpen ports for 104.26.10.78\nPORT     SERVICE\n443      https \n\nOpen ports for hackthissite.org (137.74.187.104)\nPORT     SERVICE\n443      https \n\nOpen ports for scanme.nmap.org (45.33.32.156)\nPORT     SERVICE\n22       ssh\n80       http \n\n***Tests***\n........\n----------------------------------------------------------------------\nRan 8 tests in 74.891s\n\nOK\n"
+}
